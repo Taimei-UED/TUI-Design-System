@@ -46,7 +46,7 @@ How Wiz iDM writes copy.
   (`PRO.00001`, `AE.AESTDTC`). Counts are explicit ("9 open", "34/36").
 - **Emoji:** none. Iconography does this job.
 - **Vibe:** a calm, trustworthy instrument for regulated work — efficient,
-  legible, lightly modern thanks to the rounded Outfit display + sparkle.
+  legible, lightly modern thanks to the clean Inter type + sparkle.
 
 ---
 
@@ -61,8 +61,8 @@ How Wiz iDM writes copy.
 - **The one gradient:** reserved for the brand — the logo mark and hero/cover
   surfaces (`--grad-brand`, `--grad-hero`: navy → indigo → violet). Do **not**
   use gradients on buttons, cards or backgrounds elsewhere.
-- **Type:** **Outfit** (rounded geometric) for the display wordmark and H1;
-  **SF Pro** (system stack) for every UI role H2→label; **Roboto Mono** for IDs
+- **Type:** **Inter** (open-source, SIL OFL) for every type role — display
+  wordmark, headings, body and labels; a native monospace stack for IDs
   and code. Headings are semibold; body regular. See the Typography spec.
 - **Spacing:** 4px base step (`--space-xs` 4 → `--space-4xl` 64). Comfortable
   but dense — this is a data tool.
@@ -154,9 +154,8 @@ UI kits
 
 ## Caveats
 
-- **SF Pro** is not web-distributable; `--font-ui` resolves to the Apple/system
-  stack (real SF on Apple devices, closest system UI face elsewhere). Upload SF
-  Pro web fonts to make it exact everywhere.
+- **Inter** is loaded from Google Fonts (open-source, SIL OFL) — no font
+  files are bundled. Code/IDs use the native `ui-monospace` stack.
 - Accent colour **ramps** (each hue 100→10) in the .fig were summarised to a
   base hue + soft tint; the full 10-stop ramps weren't transcribed.
 - `tokens/fig-tokens.css` carries the raw Figma variable collections including

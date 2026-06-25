@@ -20,6 +20,6 @@ Quick map:
 - `ui_kits/wiz-idm/` — click-through app recreation (Home, Manual Check, Verification).
 
 Core rules of thumb: white/grey neutral canvas, one Brand Blue (`rgb(0,73,205)`)
-for action, gradient reserved for the logo/hero, Outfit display + SF Pro UI +
-Roboto Mono for IDs, soft card shadow or hairline ring, 8px control radius, the
+for action, gradient reserved for the logo/hero, Inter for all type +
+a native monospace stack for IDs, soft card shadow or hairline ring, 8px control radius, the
 sparkle icon marks AI actions, no emoji.
