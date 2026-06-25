@@ -124,9 +124,10 @@ How Wiz iDM writes copy.
 ## Index / manifest
 
 Root
-- `guideline.html` — **the full guideline website**: foundations + every
-  component with a live preview and copy-ready JSX, plus a light/dark toggle.
-  Open this for frontend hand-off. (App logic in `guideline.app.jsx`.)
+- `index.html` — **the full guideline website**: foundations + every
+  component with a live preview and copy-ready JSX, plus a light/dark toggle
+  and an EN/中文 switch. Open this for frontend hand-off. (App logic in
+  `guideline.app.txt`, copy in `guideline.i18n.js`.)
 - `styles.css` — global entry point (imports only). Link this one file.
 - `tokens/` — `fonts.css`, `colors.css`, `typography.css`, `spacing.css`, and
   the generated `fig-tokens.css` (full Figma variable set incl. theme modes).
