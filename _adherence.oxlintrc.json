@@ -44,8 +44,8 @@
         "message": "Raw px value — use a design-system spacing token via var()."
       },
       {
-        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:SF Pro Text|SF Pro|Outfit|Roboto Mono))/i]",
-        "message": "Font not provided by the design system. Available: SF Pro Text, SF Pro, Outfit, Roboto Mono."
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inter))/i]",
+        "message": "Font not provided by the design system. Available: Inter."
       },
       {
         "selector": "JSXOpeningElement[name.name='Avatar'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|src|size|key|ref|className|style|children)$/]",
@@ -871,10 +871,7 @@
       "--ring-hairline": "color"
     },
     "fontFamilies": [
-      "Outfit",
-      "Roboto Mono",
-      "SF Pro",
-      "SF Pro Text"
+      "Inter"
     ]
   }
 }

@@ -92,6 +92,38 @@ function IconCell({ name }) {
 
 }
 
+/* npm package CTA — downloads the package zip from GitHub. */
+function NpmButton() {
+  const URL = 'https://github.com/Taimei-UED/TUI-npm/archive/refs/heads/main.zip';
+  return (
+    <a className="gl-npm" href={URL} target="_blank" rel="noopener" title="下载完整 npm 包 (TUI-npm)">
+      <i className="ri-download-2-line" style={{ fontSize: 15 }}></i>
+      npm <span className="ver">v1.0</span>
+    </a>
+  );
+}
+
+/* AI loader — Lottie animation rendered via lottie-web. */
+function AILoader({ size = 72 }) {
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    if (!ref.current || !window.lottie) return;
+    const anim = window.lottie.loadAnimation({
+      container: ref.current, renderer: 'svg', loop: true, autoplay: true,
+      path: 'assets/animations/ai-loading.json',
+    });
+    return () => anim.destroy();
+  }, []);
+  const [c, setC] = React.useState(false);
+  return (
+    <div className="gl-iconcell" style={{ width: 110 }}
+      onClick={() => { copyText('<lottie-player src="assets/animations/ai-loading.json" autoplay loop></lottie-player>'); setC(true); setTimeout(() => setC(false), 1000); }}>
+      <div ref={ref} style={{ width: size, height: size }}></div>
+      <span>{c ? 'Copied!' : 'AI loading'}</span>
+    </div>
+  );
+}
+
 /* Full Remix Icon set (CDN webfont) — reads every .ri-* class from the
    loaded remixicon stylesheet, with a live filter. */
 function RemixFull() {
@@ -450,6 +482,7 @@ function App() {
             <p>{STR.header.sub}</p>
           </div>
           <div className="gl-actions">
+            <NpmButton />
             <div className="gl-lang">
               <button className={lang === 'en' ? 'on' : ''} onClick={() => setLang('en')}>EN</button>
               <button className={lang === 'zh' ? 'on' : ''} onClick={() => setLang('zh')}>中文</button>
@@ -507,8 +540,8 @@ function App() {
               <div className="gl-demo">
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 14, width: '100%' }}>
                   {[
-                    ['wiz-display', 'Display', '64 · Outfit Bold'],
-                    ['wiz-h1', 'Heading 1', '32 · Outfit Bold'],
+                    ['wiz-display', 'Display', '64 · Inter Bold'],
+                    ['wiz-h1', 'Heading 1', '32 · Inter Bold'],
                     ['wiz-h2', 'Heading 2', '28 · Semibold'],
                     ['wiz-h3', 'Heading 3 · main title', '24 · Semibold'],
                     ['wiz-h4', 'Heading 4 · popup title', '18 · Semibold'],
@@ -585,8 +618,12 @@ function App() {
             <div className="gl-spec">
               <div className="gl-demo" style={{ flexDirection: 'column', alignItems: 'stretch', gap: 18 }}>
                 <div className="gl-ramp-title">In your bundle — &lt;Icon name="…" /&gt;</div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 18, width: '100%' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 18, width: '100%', alignItems: 'flex-start' }}>
                   {ICONS.map((n) => <IconCell key={n} name={n} />)}
+                </div>
+                <div className="gl-ramp-title">Animated — AI loader</div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 18, width: '100%' }}>
+                  <AILoader />
                 </div>
                 <div className="gl-ramp-title">Full Remix Icon set — &lt;i class="ri-…" /&gt;</div>
                 <RemixFull />

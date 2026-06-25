@@ -41,6 +41,12 @@
     border:none;border-radius:999px;cursor:pointer;font-size:12.5px;font-weight:600;background:transparent;color:var(--grey-70);}
   .gl-lang button.on{background:var(--surface-card);color:var(--brand-blue-70);box-shadow:var(--shadow-card);}
   .gl-actions{display:inline-flex;align-items:center;gap:10px;}
+  .gl-npm{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 14px;border:none;border-radius:999px;
+    background:var(--brand-blue-70);color:#fff;font-family:var(--font-ui);font-size:12.5px;font-weight:600;cursor:pointer;
+    text-decoration:none;box-shadow:var(--shadow-card);transition:background 120ms ease;}
+  .gl-npm:hover{background:var(--brand-blue-80);}
+  .gl-npm.done{background:var(--green-60);}
+  .gl-npm .ver{opacity:.8;font-weight:500;}
 
   /* ── Content ── */
   .gl-content{padding:32px 40px 120px;max-width:1100px;}
@@ -92,6 +98,7 @@
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <script src="_ds_bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 
 <script src="guideline.i18n.js"></script>
 <script type="text/babel" src="guideline.app.txt"></script>

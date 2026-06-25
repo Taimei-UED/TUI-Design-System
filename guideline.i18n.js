@@ -13,7 +13,7 @@ window.WIZ_I18N = {
     sections: {
       start: { title: 'Getting started', sub: 'Link the design-system stylesheet and bundle, then read components off the global namespace. Every component styles itself from CSS custom properties, so it inherits the active light / dark theme automatically.' },
       colors: { title: 'Colors', sub: 'Click any swatch to copy its hex. Brand Blue is the action colour; Grey carries neutral UI; the signal ramps flag state. Reference colours as CSS variables — never hardcode hex.' },
-      type: { title: 'Typography', sub: 'Outfit for the brand display; the SF Pro / system stack for UI text; Roboto Mono for codes & IDs. Use the role classes below or the matching --fs-* tokens.' },
+      type: { title: 'Typography', sub: 'Inter (open-source) for both display and UI text; a native monospace stack for codes & IDs. Use the role classes below or the matching --fs-* tokens.' },
       spacing: { title: 'Spacing & Elevation', sub: 'A 4px spacing step, an 8px-based radius scale, and a small shadow set. Reference the tokens rather than literal pixels.' },
       icons: { title: 'Iconography', sub: 'Remix Icon set, rendered through the Icon component. Click an icon to copy its JSX. Use 16–20px in dense UI.' },
       logo: { title: 'Logo', sub: 'Brand lockup — gradient mark + Wiz wordmark + product suffix; mark-only variant; on light and hero surfaces.' },
@@ -59,7 +59,7 @@ window.WIZ_I18N = {
     sections: {
       start: { title: '快速开始', sub: '引入设计系统的样式表与组件包，然后从全局命名空间读取组件。每个组件都基于 CSS 变量取色，因此会自动跟随当前的浅色 / 深色主题。' },
       colors: { title: '颜色', sub: '点击任意色板即可复制其十六进制值。品牌蓝为操作色；灰色承载中性界面；信号色用于状态提示。请以 CSS 变量引用颜色，切勿硬编码色值。' },
-      type: { title: '字体排版', sub: '品牌展示字体使用 Outfit；界面文字使用 SF Pro / 系统字体栈；编码与 ID 使用 Roboto Mono。可直接使用下方的角色类或对应的 --fs-* 令牌。' },
+      type: { title: '字体排版', sub: '展示与界面文字统一使用开源字体 Inter；编码与 ID 使用系统等宽字体栈。可直接使用下方的角色类或对应的 --fs-* 令牌。' },
       spacing: { title: '间距与层级', sub: '4px 间距步进、基于 8px 的圆角阶梯，以及一套轻量阴影。请引用令牌而非写死像素值。' },
       icons: { title: '图标', sub: 'Remix Icon 图标集，通过 Icon 组件渲染。点击图标即可复制其 JSX。在密集界面中建议使用 16–20px。' },
       logo: { title: 'Logo', sub: '品牌标识——渐变标记 + Wiz 字标 + 产品后缀；含仅标记变体；适用于浅色与主视觉背景。' },
